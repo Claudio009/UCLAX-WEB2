@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Remote Swap</title>
+		<link rel="stylesheet" href="./css/styles.css">
+		<style>
+			.remote {
+				border: solid teal 10px;
+				width: 960px;
+				height: 320px;
+				margin: 25px auto;
+				background-color: white;
+				display: flex;
+
+			}
+			/*Thumbnails on the right or left*/
+			.remote .thumbs {
+				flex-wrap: wrap;
+			}
+
+			/*Large opposite of the thumbnails (e.g. right or left)*/
+			.remote .large {
+				display: block;
+
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Remote Swap</h1>
+
+		<div class="remote">
+			<div class="thumbs">
+				<img src="./img/small/1_200x83.jpg">
+				<img src="./img/small/2_200x83.jpg">
+				<img src="./img/small/3_200x83.jpg">
+				<img src="./img/small/4_200x83.jpg">
+				<img src="./img/small/5_200x83.jpg">
+				<img src="./img/small/6_200x83.jpg">
+			</div>
+			<div class="large">
+				<!-- Large Goes Here -->
+				<img src="./img/large/1_600x250.jpg">
+			</div>
+		</div>
+
+		<script src="./js/jquery-1.11.3.min.js"></script>
+		<script>
+			// Your script goes here.
+		 var large = document.querySelectorAll('.large img');
+		 var thumbs = document.querySelectorAll('.thumbs img');
+
+		 console.log('large', large[0]);
+		 console.log('thumbs', thumbs[0]);
+
+		 thumbs[1].addEventListener('mouseover', function(){
+		 console.log('you got me!');
+     large[0].src = './img/large/2_600x250.jpg';
+
+		 
+
+		 });
+		</script>
+	</body>
+</html>
