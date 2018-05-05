@@ -53,18 +53,65 @@
 			/*-------------------------------------
 			| Review
 			-------------------------------------*/
+var container1 = 'I went to the park';
+var container2 = 'I can\'t do this';
+var container3 = 'I can\'t do this';
 
+console.log(container1 + ' and' + container2);
+
+console.log('200' + 300);
 
 			/*-------------------------------------
 			| Conditions
 			-------------------------------------*/
-
-
+var weather = prompt('How is the Weather Today?');
+if (weather == 'rainy')
+{
+	console.log('Bring your Unbrella');
+}
+else
+{
+	console.log('bring sunscreen.');
+}
 			/*-------------------------------------
 			| Toggle Element Examples
 			-------------------------------------*/
 
+			//0. Grab some toys
+			var button = document.querySelector('button.product');
+			var showHideText = document.querySelector('button.product span');
+			var departureDetails = document.querySelector('div.departure-details');
 
+			console.log('button', button);
+			console.log('Show Hide Text', showHideText);
+			console.log('Depart Details', departureDetails);
+
+
+			//1. hide the departure-details
+
+			departureDetails.style.display = 'none';
+
+			//2. when user clicks on button (toggle)
+						button.addEventListener('click', function(){
+							console.log('you clicked me!!');
+
+							if(departureDetails.style.display == 'none')
+						{
+							console.log('Do A');
+			     //a. shows departure-details
+					 						departureDetails.style.display = "block"
+											showHideText.innerHTML = 'block';
+          					//change name 'hide'
+						}
+						else
+						{
+							console.log('Do B');
+					 //b. hides departure-details
+					 						departureDetails.style.display = "none"
+					 						showHideText.innerHTML = 'none';
+										//hange name 'Show'
+						}
+					});
 		</script>
 
 
